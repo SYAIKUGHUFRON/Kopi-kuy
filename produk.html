@@ -169,17 +169,24 @@ data_kopi.forEach(item => {
                 baris_produk.innerHTML = template.
                 data_kopi.forEach(item => {
                     template += `<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                                    <div class="card">
-                                        <img src="${item.foto}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${item.nama}</h5>
-                                            <div class="row hargaukuran my-4">
-                                                <div class="col">
-                                                    ${item.size}
-                                                </div>
-      
+                        <div class="card">
+                                <img src="${item.foto}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.nama}</h5>
+                                    <div class="row my-4">
+                                        <div class="col">
+                                            ${item.size}
+                                        </div>
+                                        <div class="col">
+                                            ${item.harga}
+                                        </div>
+                                    </div>
+                                    <a href="${item.link}" class="btn btn-success w-100"><i class="bi bi-cart4"></i> Beli</a>
+                                </div>
+                            </div></div>`
+                        })
                 baris_produk.innerHTML = template
-            }
+            })
         }
 
     </script>
